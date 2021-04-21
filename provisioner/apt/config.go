@@ -3,9 +3,6 @@
 package apt
 
 import (
-	"fmt"
-	"os"
-
 	"github.com/hashicorp/packer-plugin-sdk/common"
 	"github.com/hashicorp/packer-plugin-sdk/template/config"
 	"github.com/hashicorp/packer-plugin-sdk/template/interpolate"
@@ -30,13 +27,6 @@ func (c *Config) Prepare(raws ...interface{}) error {
 
 	if c.CacheDir == "" {
 		c.CacheDir = "/var/cache/apt/archives"
-	}
-	cache, err := os.Stat(c.CacheDir)
-	if err != nil {
-		return fmt.Errorf("APT cache directory not found: %s", c.CacheDir)
-	}
-	if !cache.IsDir() {
-		return fmt.Errorf("APT cache directory is not a directory: %s", c.CacheDir)
 	}
 
 	return nil
