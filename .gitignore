@@ -1,2 +1,4 @@
 packer-builder-nspawn
 packer-provisioner-apt
+dist/
+docs.zip
