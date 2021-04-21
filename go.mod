@@ -1,11 +1,10 @@
-module git.sr.ht/~angdraug/packer-provisioner-apt
+module github.com/emansom/packer-plugin-apt
 
-go 1.15
+go 1.16
 
 require (
-	github.com/hashicorp/hcl/v2 v2.7.0
-	github.com/hashicorp/packer v1.6.4
-	github.com/zclconf/go-cty v1.5.0
+	github.com/apparentlymart/go-textseg/v12 v12.0.0 // indirect
+	github.com/hashicorp/hcl/v2 v2.9.1
+	github.com/hashicorp/packer-plugin-sdk v0.2.0
+	github.com/zclconf/go-cty v1.8.1
 )
-
-replace github.com/hashicorp/packer => github.com/angdraug/packer v1.6.4-ugorji-go-v1.1.13
