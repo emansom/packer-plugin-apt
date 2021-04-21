@@ -1,4 +1,5 @@
 //go:generate mapstructure-to-hcl2 -type Config
+//go:generate packer-sdc struct-markdown
 package apt
 
 import (
